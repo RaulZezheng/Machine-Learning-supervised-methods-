@@ -1,0 +1,10 @@
+1. Consider the given subset of Breast cancer Wisconsin dataset, and the division to training and test sets given in the code template. 
+With this data, train a linear regression model (without the intercept term), and a linearSVM imported from sklearn. 
+What is the difference between the test accuracies of the model, accuracy(ytrue, ySVM) − accuracy(ytrue, yLR)?
+
+-0.098
+
+2. Continuing with the same setting: it is important to catch all the serious cancer cases, while it is not a big deal if some benign cases are predicted as serious. 
+Considering the malignant cases as the "positive" class, what evaluation metric should be used to find which model is better, and which model outperforms the other with respect to this measure?
+
+-Recall is the best evaluation metric, LR performs better than SVM
