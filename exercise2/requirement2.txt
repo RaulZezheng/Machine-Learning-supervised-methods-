@@ -1,0 +1,12 @@
+1. How many training samples are needed for the difference between the test error and 
+the generalisation bound based on Rademacher complexity to drop below 0.4 (for the first time) when δ = 0.05?
+To train with n samples, use the first n samples of the training set.
+
+-About 77-80 samples
+                                                                           
+2. Continuing with the same data, how many training samples are needed for the difference between the test error and the generalisation bound based on VC dimension complexity to
+drop below 0.4 (for the first time) when δ = 0:05? 
+The VC-dimension of perceptron is d + 1, where d is the number of features in the data.
+                
+-269
+                      
