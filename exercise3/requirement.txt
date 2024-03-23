@@ -1,0 +1,35 @@
+This question, and also the next one, is about selecting the best performing hyperparameters by crossvalidation. 
+Here we assume that the full data set is used as training which is split into training and validation
+sets. In these scenarios we don’t consider an independent test set. This model could be extended to a complete nested cross-validation.
+
+Let the stochastic gradient algorithm for Logistic Regression be applied to find the best classifier on the
+Breast Cancer dataset of the Sklearn package. The labels of the Breast Cancer dataset are of {0, 1} which is converted into
+{−1, +1}.
+
+In each training, initialize the weight vector, w, to have zero components to reduce the dependence of the
+results on the random initialization.
+
+Normalize the rows of the input matrix to have the L∞ norm to be equal to 1. 
+Without that normalization overflow error might occur in the exponential function!
+The training examples are processed in the order appearing in the original data file, no randomization
+is applied to avoid the random fluctuation of the accuracy values. The hyperparameters are given by the
+following rules. The number of iteration is equal to 50. The step size is taken from a list [0.1, . . . , 1.0].
+
+1. The task is to run the Logistic Regression algorithm via the 5-fold cross-validation. 
+The training and validation examples are selected by applying the KFold function from the sklearn.model_selection module.
+In each fold compute the ROC-AUC score, the area under the ROC curve as an accuracy measure on the corresponding validation set.
+Run this procedure for all step size hyperparameters. There are 50 training and validation sets altogether. 
+For each step size hyperparameter compute the average ROC-AUC score on the 5 folds.
+Question: what is value of the maximum average score, and the corresponding value of the step size of the 10 different step sizes?
+
+-0.94, 0.6
+
+2. In this question the code constructed above is reused with the following modifications. 
+The step size is fixed to 0.1, but the number of iterations is going through on a list [10, . . . , 100]. 
+Every other part of the code: the algorithm of the logistic regression, the 5-fold cross
+validation and the row wise normalization by L∞ norm remains the same. 
+The accuracy is also measured in
+the same way, thus the ROC-AUC score is used. The weight vector, w, is initialized to zeros in this question as well.
+Question: what is value of the maximum average score, and corresponding value of the iteration of the 10 different number of iterations?
+
+-0.94, 90
