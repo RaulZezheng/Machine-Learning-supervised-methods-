@@ -45,7 +45,7 @@ Decision Tree
 MLP
 
 What is the order of SVM accuracies on test set? (A > B denotes here that accuracy obtained with A is higher than accuracy with B)
-OVO > MC > OVA
+- OVO > MC > OVA
 
 
 
