@@ -1,0 +1,33 @@
+Methods need to be applied:
+• The “Stochastic gradient descent algorithm for SVM” algorithm. The kernel applied is linear. It is called later on as “primal” method.
+• The method sklearn.svm.SVC which is taken from from the sklearn package, and the linear kernel is used here as well. It is called as “svc” method.
+
+In the implementation of the primal method, process the data in the original order of the examples appearing in the dataset. 
+In the cross-validation the best C hyper-parameter which controls the balance between the complexity model and the empirical error is looked for.
+Here a summary of the procedure is described.
+In the cross-validation you can apply three nested loops:
+• Outer loop; which selects the training and the test sets.
+• The hyper-parameter selecting loop; which enumerates the values of hyperparameter C.
+• Inner loop; in which the training is split into inner training and validation set.
+
+The methods are evaluated in the following way:
+• In the inner loop, the F1 score is computed on all validation sets and for both methods for a fixed C
+value.
+• After the inner loop, the mean of the F1 score is computed on the validation sets for both methods.
+• After the hyper-parameter selecting loop, that C is selected for each method which gives the highest
+mean F1 score.
+• In the outer loop, the training and the prediction are executed on the best C parameters selected for
+both methods.
+• Compute the F1 score for both methods and for all of the 5 test sets.
+• After the outer loop compute the mean and the standard deviation of the F1 scores corresponding to
+the 5 test sets for both methods.
+
+Question: What is the ratio of the standard deviations of the F1 scores computed on the tests sets in
+the outer loop. The ratio is computed in this way:
+standard deviation of the primal / standard deviation of the svc.
+(1) 0.84
+(2) 1.22
+(3) 2.34
+(4) 1.49
+
+-d
