@@ -1,0 +1,20 @@
+The main programming task is the implementation of the AdaBoost applied on a set of MLP learners
+which needs to contain the training and prediction functions corresponding to the AdaBoost. 
+Finally, the performance of ensemble learner needs to be measured on two datasets by F1 score, 
+and to provide those learners whose weight are the highest in the ensembles corresponding to the two datasets. 
+In the answer the learners are identified by the number of hidden nodes.
+
+Question: Run the training and test of the AdaBoost on the two datasets and provide the two F1 scores
+computed on the datasets, and the learners whose weight in the ensemble is the highest one for both datasets.
+The learner is identified by the number of hidden nodes.
+The answer consists of 4 numbers:
+• F1 score on make_circles dataset,
+• F1 score on make_moons dataset,
+• Number of hidden nodes of that learner whose alpha value is the highest on the make_circles dataset,
+• Number of hidden nodes of that learner whose alpha value is the highest on the make_moons dataset.
+(1) 0.77, 0.90, 10, 10
+(2) 0.75, 0.92, 100, 100
+(3) 0.82, 0.88, 20, 50
+(4) 0.80, 0.93, 10, 100
+
+-1
